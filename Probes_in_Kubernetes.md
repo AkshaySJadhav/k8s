@@ -54,8 +54,15 @@ Liveness Probe:-
 4. successThreshold : minimum number of consecutive successful checks for the probe to pass.
 5. failureThreshold : number of retries before marking the probe as failed. For liveness probes, this will lead to the pod restarting. For readiness probes, this will mark the pod as unready.
 
+### How Liveness Probes Work
 
+There are three types of liveness probes in Kubernetes:
+
+1. <b>HTTP GET Probes:</b> These probes send an HTTP GET request to the specified path and port on the container. If the probe receives an HTTP response with a status code between 200 and 399, it considers the container to be healthy.
+2. <b>TCP Socket Probes:</b> These probes attempt to establish a TCP connection to the specified port on the container. If the connection is successful, the container is considered healthy.
+3. <b>Exec Probes:</b> These probes execute a command within the container. If the command returns a 0 exit status, the container is considered healthy. Non-zero exit statuses indicate that the container is unhealthy.
 
 Reference:<br>
 [1]. https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/ <br>
-[2]. https://blog.devgenius.io/understanding-kubernetes-probes-5daaff67599a 
+[2]. https://blog.devgenius.io/understanding-kubernetes-probes-5daaff67599a <br>
+[3]. https://sudipta-deb.in/2023/03/probes-in-kubernetes-liveness-probe-readiness-probe-startup-probe.html
