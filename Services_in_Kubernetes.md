@@ -139,6 +139,3 @@ apple@Apples-MacBook-Pro ~ %
 apple@Apples-MacBook-Pro ~ % curl 192.168.121.2:30007
 <html><body><h1>It works!</h1></body></html>
 ```
-
-## Configurure LoadBalancer for HTTPd containers/pod.
-
