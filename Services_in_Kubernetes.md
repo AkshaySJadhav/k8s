@@ -9,9 +9,9 @@ Services provide discovery and routing between pods. For example, services conne
 
 What are the types of Kubernetes services?
 <br>
-[1]. ClusterIP:- Exposes a service which is only accessible from within the cluster. <br>
-[2]. NodePort:- Exposes a service via a static port on each node’s IP. <br>
-[3]. LoadBalancer:- Exposes the service via the cloud provider’s load balancer.
+[1]. <b>ClusterIP</b>:- Exposes a service which is only accessible from within the cluster. <br>
+[2]. <b>NodePort</b>:- Exposes a service via a static port on each node’s IP. <br>
+[3]. <b>LoadBalancer</b>:- Exposes the service via the cloud provider’s load balancer.
 
 
 ## Configurure ClusterIP service for HTTPd containers/pod.
