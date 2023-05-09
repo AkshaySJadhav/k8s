@@ -11,7 +11,7 @@ The entities that a Pod can communicate with are identified through a combinatio
 
 We are going to create a policy that will deny all the communications of the pod for a specific namespace and we will improve the policy as per out requirement.
 
-### Scenario 1: Deny All policy. 
+## Scenario 1: Deny All policy. 
 ---
 
 - Creating the name space and creating the 2 pod's under same namespace.
@@ -301,9 +301,7 @@ controlplane $
 
         
 - Now, we are able to connect to the live-pod ip address from the app-pod.
-
-```
-        
+```    
 controlplane $ kubectl -n development exec -it app-pod -- curl 192.168.1.5
 <!DOCTYPE html>
 <html>
