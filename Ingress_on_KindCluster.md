@@ -40,7 +40,6 @@ spec:
                 name: hello
                 port:
                   number: 80
-
 ```
 
 
@@ -55,7 +54,10 @@ Then add an entry to /etc/hosts with the IP address found that looks like:
 127.0.0.1	localhost	kubernetes.docker.internal
 ```
 
-Finally, we can curl kubernetes.docker.internal but this will not work as Kind is enabled the http on port "9090" and https on "9443".
+Finally, we can curl <ins>kubernetes.docker.internal</ins> on port 80 but it will not work as Kind Cluster is setup to access http on port "9090" and https on "9443". Hence we need to add "9090" port number in the URL other wise connection will fail.
+
+
+<img src="src/Kind%20configuration.png" alt="drawing" width="800"/>
 
 This is how we reachout to the pod:
 ```
@@ -67,4 +69,4 @@ URI: /
 Request ID: 1fc382c5e5b264533c3e54c2059faa0b
 ```
 
-
+![Alt text](src/WebPage.png)
